@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fashion & Style</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="/src/public/css/style.css">
+    
+</head>
+
+<body>
+    <!-- Inicio de la primera página -->
+    <div data-role="page" data-theme="b">
+        <div data-role="header" style="overflow:hidden; background-color: #e0ad83;">
+            <div style="background-color: #ffffff; text-align: center;">
+                <ul>
+                  <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content" style="background-color: #f0cda2;">
+          <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 20px;">En nuestra tienda, fusionamos lo último en tendencias contemporáneas con un toque de energía juvenil para ofrecerte una experiencia de compra única.</p>
+          <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 15px;">Únete a nosotros en este viaje emocionante a través de la moda juvenil</p>
+            <div id="logo-container" style="text-align: center; margin-top: 20px;">
+                <img style="max-width:20%; height: auto; border-radius: 20px;" src="https://www.instyle.es/medio/2020/06/18/ropa-moda-verano-como-combinarla-3_7a76a7b4_1200x925.jpg" alt="Fondo">
+            </div>
+                    
+            <div><h2 style="overflow:hidden;text-align: center; color: #c27810;">Agrega nuevas blusas de temporada:</h2></div>
+            <form action="/api/clothes/" method="POST">
+              <input type="text" name="barcode" id="txt_barcode" placeholder="Código de barras" style="overflow:hidden; background-color:#e0ad83;"> 
+
+              <input type="text" name="description" id="txt_description" placeholder="Descripción" style="overflow:hidden; background-color:#e0ad83;">
+
+              <input type="text" name="size" id="txt_size" placeholder="Talla" style="overflow:hidden; background-color:#e0ad83;">
+
+              <input type="text" name="brand" id="txt_brand" placeholder="Marca" style="overflow:hidden; background-color:#e0ad83;">
+
+              <input type="number" name="price" id="txt_price" placeholder="Precio de venta" style="overflow:hidden; background-color:#e0ad83;">
+
+              <input type="number" name="stock" id="txt_stock" placeholder="Existencias" style="overflow:hidden; background-color:#e0ad83;">
+
+              <label for="flip-6">Estatus:</label>
+              <select name="status" id="flip-6" data-role="slider">
+                  <option value="0">Inactivo</option>
+                  <option value="1">Activo</option>
+              </select>
+              <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini" style="overflow:hidden; background-color:#e0ad83;">Guardar</button>
+            </form>
+            </div>
+            <div data-role="header" style="color: #fff; margin-top: 35px; background-color: #e0ad83; overflow: hidden;">
+                <div style="background-color: #e0ad83; text-align: center;">
+                    <ul>
+                        <h2 style="color: white;">¡Productos de temporada disponibles aquí!</h2>
+                    </ul>
+                </div>
+            </div>
+
+        <div role="main" class="ui-content" style="background-color: #f0cda2;">
+
+          <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter"
+          data-input="#searchForCollapsibleSet">
+          <% products.forEach((product)=>{ %>
+              <div data-role="collapsible" data-filtertext="<%= product.description %>">
+                  <h3><%= product.description %></h3>
+                  <ul data-role="listview" data-inset="false">
+                      <li>Código de barras: <%= product.barcode %></li>
+                      <li>Marca: <%= product.brand %></li>
+                      <li>Precio de compra:<%= product.price %></li>
+                      <li>Precio de venta: <%= product.cost %></li>
+                      <li>Existencias: <%= product.stock %></li>
+                      <li>Fecha de caducidad: <%= product.expiredDate %></li>
+                      <li>Estatus: <%= product.status %></li>
+                      <li><a href="/api/clothes/<%= product.barcode %>" class="ui-btn" style="background-color: rgb(216, 216, 17);">Editar</a></li>
+                      <li><a href="/api/clothes/delete/<%= product.barcode %>" class="ui-btn" style="background-color: rgb(241, 121, 16);">Eliminar</a></li>
+                  </ul>
+              </div>
+          <% })%>
+
+      </div>
+        </div>
+        <div data-role="footer" style="text-align: center; background-color: #fff">
+            <div class="footer-bottom" style="text-align: center; margin-top: 10px;">
+                <p style="text-align: center; font-size: 15px; color:rgb(149, 94, 10);">¡Sumérgete en el vibrante mundo de la moda juvenil con nosotros!</p>
+            </div>
+        </div>      
+            </div>
+    </div>
+
+
+</body>
+
+</html>

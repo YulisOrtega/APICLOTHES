@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+<body>
+    <!-- Start of first page -->
+    <form action="/api/clothes/menu/" method="POST">
+    <div data-role="page" id="home">
+      
+        <div data-role="header" style="overflow:hidden; background-color: #e0ad83;">
+            <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+            <div data-role="navbar">
+            <ul>
+            <li><a href="#Blusas">Blusas</a></li>
+            <li><a href="#Pantalones">Pantalones</a></li>
+            </ul>
+            </div><!-- /navbar -->
+            <div role="main" class="ui-content" style="background-color: #f0cda2;">
+                <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 20px;">En nuestra tienda, fusionamos lo último en tendencias contemporáneas con un toque de energía juvenil para ofrecerte una experiencia de compra única.</p>
+                <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 15px;">Únete a nosotros en este viaje emocionante a través de la moda juvenil</p>
+            </div><!-- /content -->
+            <image src="/src/images/Captura de pantalla 2024-01-25 222002.png" style="width: auto;"></image>
+            <div data-role="footer">
+                <h4 style="text-align: center;">¡Tu mejor elección!</h4>
+            </div><!-- /header -->
+            </div>
+          </form>
+          </div><!-- /footer -->
+    </div><!-- /page -->
+    
+    <!-- Start of second page -->
+    <div data-role="page" id="Blusas">
+        <div data-role="header" style="overflow:hidden; background-color: #e0ad83;">
+            <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
+            <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home"><a href="#home">Home</a></button>
+            <div data-role="navbar">
+            <ul>
+            <li><a href="#">Blusas</a></li>
+        </ul>
+            <div class="marco" style=" display: flex;flex-wrap: wrap;justify-content: space-around;">
+                <!-- Primera fila de imágenes -->
+                <div class="imagen" style="width: 30%; height: 20%; margin: 25px;border-radius: 5px; overflow: hidden; ">
+                  <img src="/src/images/img3.jpeg" alt="Imagen 1">
+                </div>
+                <div class="imagen" style="width: 30%; height: 20%;margin: 25px;border-radius: 5px; overflow: hidden;">
+                  <img src="/src/images/img5.jpg" alt="Imagen 2">
+                </div>
+                <div class="imagen" style="width: 20%; height: 30%; margin: 25px;border-radius: 5px; overflow: hidden;">
+                  <img src="/src/img1.jpg" alt="Imagen 3">
+                </div>
+            
+                <!-- Segunda fila de imágenes -->
+                <div class="imagen" style="width: 30%; height: 20%; margin: 25px;border-radius: 5px; overflow: hidden;">
+                  <img src="/src/img3.jpeg" alt="Imagen 4">
+                </div>
+                <div class="imagen" style="width: 30%; height: 20%;margin: 25px; border-radius: 5px; overflow: hidden;">
+                  <img src="/src/img5.jpg" alt="Imagen 5">
+                </div>
+                <div class="imagen" style="width: 20%; height: 30%;margin:25px;border-radius: 5px; overflow: hidden;">
+                  <img src="/src/img1.jpg" alt="Imagen 6">
+                </div>
+              </div>
+            </div><!-- /navbar -->
+            <div role="main" class="ui-content" style="background-color: #f0cda2;">
+                <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 15px;">¡Sumérgete en el vibrante mundo de la moda juvenil con nosotros!</p>
+            </div><!-- /content -->
+            </div><!-- /header -->
+            </div>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <!-- Start of tree page -->
+    <div data-role="page" id="Pantalones">
+        <div data-role="header" style="overflow:hidden; background-color: #e0ad83;">
+            <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
+            <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home"><a href="#home">Home</a></button>
+            <div data-role="navbar">
+            <ul>
+            <li><a href="#">Pantalones</a></li>
+        </ul>
+            <div class="marco" style=" display: flex;flex-wrap: wrap;justify-content: space-around;">
+                <!-- Primera fila de imágenes -->
+                <div class="imagen" style="width: 30%; height: 20%; margin: 25px;border-radius: 5px; overflow: hidden; ">
+                  <img src="/src/pantalon1.webp" alt="Imagen 1">
+                </div>
+                <div class="imagen" style="width: 30%; height: 30%;margin: 25px;border-radius: 5px; overflow: hidden;">
+                  <img src="/src/pantalon4.jpg" alt="Imagen 2">
+                </div>
+            
+                <!-- Segunda fila de imágenes -->
+                <div class="imagen" style="width: 30%; height: 20%; margin: 25px;border-radius: 5px; overflow: hidden;">
+                  <img src="/src/pantalon1.webp" alt="Imagen 4">
+                </div>
+                <div class="imagen" style="width: 30%; height: 30%;margin: 25px; border-radius: 5px; overflow: hidden;">
+                  <img src="/src/pantalon4.jpg" alt="Imagen 5">
+                </div>
+              </div>
+            </div><!-- /navbar -->
+            <div role="main" class="ui-content" style="background-color: #f0cda2;">
+                <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 15px;">¡Sumérgete en el vibrante mundo de la moda juvenil con nosotros!</p>
+            </div><!-- /content -->
+            </div><!-- /header -->
+            </div>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+    
+    </body>
+</html>
