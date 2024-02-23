@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>Tienda de Abarrotes</title>
+    <title>Fashion & Style</title>
 </head>
 
 <body>
     <div data-role="page">
+        <h2>Edita los productos</h2>
         <div data-role="header" style="overflow:hidden; background-color: #fff;">
             <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
         </div>
         <div data-role="content" style="overflow:hidden; background-color: #e0ad83;">
             <form action="/api/clothes/<%= product.barcode%>" method="POST">
+                <label for="flip-6" style="overflow:hidden; background-color: #e0ad83;">URL: </label>
+                <input type="text" name="urlImg" id="txt_url" value="<%= product.urlImg %>">
+
                 <label for="flip-6" style="overflow:hidden; background-color: #e0ad83;">Código de barras: </label>
                 <input type="text" name="barcode" id="txt_barcode" value="<%= product.barcode %>">
 

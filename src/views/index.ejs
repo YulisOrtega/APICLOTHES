@@ -24,14 +24,14 @@
         </div>
 
         <div role="main" class="ui-content" style="background-color: #f0cda2;">
-          <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 20px;">En nuestra tienda, fusionamos lo último en tendencias contemporáneas con un toque de energía juvenil para ofrecerte una experiencia de compra única.</p>
-          <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 15px;">Únete a nosotros en este viaje emocionante a través de la moda juvenil</p>
             <div id="logo-container" style="text-align: center; margin-top: 20px;">
-                <img style="max-width:20%; height: auto; border-radius: 20px;" src="https://www.instyle.es/medio/2020/06/18/ropa-moda-verano-como-combinarla-3_7a76a7b4_1200x925.jpg" alt="Fondo">
+                <img style="max-width:100%; height: auto; border-radius: 20px;" src="https://marketplace.canva.com/EAF1eGwLXy8/1/0/1600w/canva-collage-de-fotos-horizontal-ropa-de-moda-minimalista-blanco-LtG80TnyKL0.jpg" alt="Fondo">
             </div>
                     
-            <div><h2 style="overflow:hidden;text-align: center; color: #c27810;">Agrega nuevas blusas de temporada:</h2></div>
+            <div><h2 style="overflow:hidden;text-align: center; background-color: #fff; color: black; font-family: 'Times New Roman', Times, serif;">Agrega nuevas blusas de temporada:</h2></div>
             <form action="/api/clothes/" method="POST">
+              <input type="text" name="urlImg" placeholder="URL de la imagen" style="overflow:hidden; background-color:#e0ad83;">
+
               <input type="text" name="barcode" id="txt_barcode" placeholder="Código de barras" style="overflow:hidden; background-color:#e0ad83;"> 
 
               <input type="text" name="description" id="txt_description" placeholder="Descripción" style="overflow:hidden; background-color:#e0ad83;">
@@ -55,7 +55,7 @@
             <div data-role="header" style="color: #fff; margin-top: 35px; background-color: #e0ad83; overflow: hidden;">
                 <div style="background-color: #e0ad83; text-align: center;">
                     <ul>
-                        <h2 style="color: white;">¡Productos de temporada disponibles aquí!</h2>
+                        <h2 style="color: white; text-align: center;">¡Productos de temporada disponibles aquí!</h2>
                     </ul>
                 </div>
             </div>
@@ -68,6 +68,7 @@
               <div data-role="collapsible" data-filtertext="<%= product.description %>">
                   <h3><%= product.description %></h3>
                   <ul data-role="listview" data-inset="false">
+                    <img style="width: 170px; border-radius: 5px; height: 200px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.description %>">
                       <li>Código de barras: <%= product.barcode %></li>
                       <li>Marca: <%= product.brand %></li>
                       <li>Precio de compra:<%= product.price %></li>

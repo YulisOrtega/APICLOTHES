@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 const productSchema= new Schema({
+    urlImg: String,
     barcode:{
         type: String,
         unique: true,
