@@ -11,4 +11,5 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));//recibir datos desde un servidor
 app.use(morgan('dev'));
 app.use('/api/clothes', productsRouter);
+app.use('/api/clothes/menu', productsRouter);
 export default app;

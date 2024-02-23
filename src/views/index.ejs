@@ -28,7 +28,7 @@
                 <img style="max-width:100%; height: auto; border-radius: 20px;" src="https://marketplace.canva.com/EAF1eGwLXy8/1/0/1600w/canva-collage-de-fotos-horizontal-ropa-de-moda-minimalista-blanco-LtG80TnyKL0.jpg" alt="Fondo">
             </div>
                     
-            <div><h2 style="overflow:hidden;text-align: center; background-color: #fff; color: black; font-family: 'Times New Roman', Times, serif;">Agrega nuevas ropa aqui:</h2></div>
+            <div><h2 style="overflow:hidden;text-align: center; background-color: #fff; color: black; font-family: 'Times New Roman', Times, serif;">Agrega nueva ropa aqui:</h2></div>
             <form action="/api/clothes/" method="POST">
               <input type="text" name="urlImg" placeholder="URL de la imagen" style="overflow:hidden; background-color:#e0ad83;">
 
@@ -60,10 +60,9 @@
                 </div>
             </div>
 
-        <div role="main" class="ui-content" style="background-color: #f0cda2;">
-
+        <div role="main" class="ui-content"style="background-color: #e0ad83;">
           <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter"
-          data-input="#searchForCollapsibleSet">
+          data-input="#searchForCollapsibleSet" style="width:45%; margin-bottom: 20px; font-size: 11px; border-radius: 15px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
           <% products.forEach((product)=>{ %>
               <div data-role="collapsible" data-filtertext="<%= product.description %>">
                   <h3><%= product.description %></h3>
