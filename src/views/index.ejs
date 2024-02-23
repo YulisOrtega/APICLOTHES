@@ -21,6 +21,11 @@
                   <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
                 </ul>
             </div>
+            <div data-role="navbar">
+                <ul>
+                <li><a href="#home" class="ui-btn-active">¡Visualiza aqui algunos de nuestros productos disponibles!</a></li>
+                </ul>
+                </div><!-- /navbar -->
         </div>
 
         <div role="main" class="ui-content" style="background-color: #f0cda2;">
@@ -60,6 +65,7 @@
                 </div>
             </div>
 
+            <!-- Edit-->
         <div role="main" class="ui-content"style="background-color: #e0ad83;">
           <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter"
           data-input="#searchForCollapsibleSet" style="width:55%; margin-bottom: 25px; font-size: 15px; border-radius: 12px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
@@ -83,15 +89,63 @@
 
       </div>
         </div>
+
+        <!--- Fotter -->
         <div data-role="footer" style="text-align: center; background-color: #fff">
             <div class="footer-bottom" style="text-align: center; margin-top: 10px;">
                 <p style="text-align: center; font-size: 15px; color:rgb(149, 94, 10);">¡Sumérgete en el vibrante mundo de la moda juvenil con nosotros!</p>
             </div>
         </div>      
             </div>
-    </div>
 
+            <!-- Start of first page -->
+    <div data-role="page" id="home">
+        
+          <div data-role="header" style="overflow:hidden; background-color: #e0ad83;">
+              <h1 style="text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif; margin:10; color:rgb(0, 0, 0); text-align:center;">Fashion<span style="font:normal; color:rgb(149, 94, 10); text-align:center;">&</span>Style </h1>
+              <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+              <div data-role="navbar">
+              <ul>
+              <li><a href="/api/clothes/">Inicio</a></li>
+              </ul>
+              </div><!-- /navbar -->
+              <div role="main" class="ui-content" style="background-color: #f0cda2;">
+                  <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 20px;">En nuestra tienda, fusionamos lo último en tendencias contemporáneas con un toque de energía juvenil para ofrecerte una experiencia de compra única.</p>
+                  <p style="text-align: center; font-family: 'Times New Roman', Times, serif;font-size: 15px;">Únete a nosotros en este viaje emocionante a través de la moda juvenil</p>
+              </div><!-- /content -->
+              <!-- Primera fila de imágenes -->
+              <div class="contenedor-imagenes" style="width: 100%; overflow-x: auto; white-space: nowrap;">
+                <!-- Aquí colocas tus imágenes -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFatv-yEIh24EKsQmrporgphNePcLMs1I9FrYs1q0M5g&s" alt="Imagen 1" style="margin-right: 90px; max-width: 200px;">
+                
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQozR45cMM-MECkvvYvCjrlFr1KXkKeSEV3uLhtY-eRH7jelbyJHPo13pJAOG1tKPHpGQE&usqp=CAU" alt="Imagen 2" style="margin-right: 90px; max-width: 230px;">
 
+                  <img src="https://http2.mlstatic.com/D_NQ_NP_850349-MCO47837525387_102021-W.jpg" style="margin-right: 90px; max-width: 210px;">
+
+                  <img src="https://i.pinimg.com/736x/60/47/4e/60474e853f00f2cd6a87223292332844.jpg" style="margin-right: 90px; max-width: 175px;">
+              </div>
+              <br>
+               <!-- Segunda fila de imágenes -->
+               <div class="contenedor-imagenes" style="width: 100%; overflow-x: auto; white-space: nowrap;">
+                <!-- Aquí colocas tus imágenes -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeqwk6s9uHsPYEqOWazf1wJa3M7z-ApizB9B_6orxOOA&s" alt="Imagen 1" style="margin-right: 100px; max-width: 200px;">
+                
+                  <img src="https://m.media-amazon.com/images/I/51lQ29iAA4L.jpg" alt="Imagen 2" style="margin-right: 130px; max-width: 195px;">
+
+                  <img src="https://i.pinimg.com/originals/fb/68/37/fb683776e979f43704975242a0b78310.jpg" style="margin-right: 90px; max-width: 195px;">
+
+                  <img src="https://www.zaret.co/wp-content/uploads/2022/07/Wide-Leg-Jeans-703-Indigo-Tono-Medio-Rotos-4.jpg" style="margin-right: 90px; max-width: 174px;">
+              </div>
+              
+
+              <div data-role="footer">
+                  <h4 style="text-align: center;">¡Tu mejor elección!</h4>
+              </div><!-- /header -->
+              </div>
+            
+            </div><!-- /footer -->
+      </div><!-- /page -->
+            
 </body>
 
 </html>
